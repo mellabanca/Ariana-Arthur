@@ -31,7 +31,7 @@ export default class Feed extends Component{
     }
 
     renderItem = ({ item: story }) => {
-        return <StoryCard story={story} />;
+        return <StoryCard story={story} navigation={this.props.navigation}/>;
       };
     
     keyExtractor = (item, index) => index.toString();
@@ -95,10 +95,11 @@ const styles = StyleSheet.create({
     },
     appTitleText: {
       color: "white",
-      fontSize: RFValue(28),
+      fontSize: RFValue(20),
       fontFamily: "Bubblegum-Sans"
     },
     cardContainer: {
-      flex: 0.93
+      flex: 0.93,
+      paddingBottom: 60
     }
   });
